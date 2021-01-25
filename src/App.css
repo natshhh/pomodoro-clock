@@ -1,38 +1,123 @@
-.App {
-  text-align: center;
+body{
+  background-color: rgba(255, 218, 121,0.8);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+  display: flex;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.lengths-box {
+  margin: 50px auto 130px auto;
+  padding: 0 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  width: 30vw;
+  border-bottom: 3px double rgba(211, 84, 0,1.0);
+  border-top: 1px groove rgba(211, 84, 0,1.0);
+  border-radius: 80px;
+  box-shadow: 0 4px 8px black;
+  background-color: rgba(243, 156, 18,0.7);
+}
+.custom {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+.length-titles {
+  padding: 10px;
+  margin: 0;
+  font-weight: 500;
+  color: rgba(234, 32, 39,1.0);
+}
+.length-arrows {
+  background: none;
+  outline: none;
+  border: none;
+  color: rgba(234, 32, 39,1.0);
+  margin: 0 15px;
+}
+.length-arrows:hover,
+.start-reset-buttons:hover{
+  transform: scale(1.5);
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.length-time {
+  background-color: none;
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0 10px;
+  color: rgba(44, 44, 84,1.0);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+
+#time-left{
+  font-size: 80px;
+  margin: 10px 20px;
+  color: rgba(44, 44, 84,1.0);
+}
+#timer-label{
+  padding-top: 0;
+  margin: 0;
+  font-size: 30px;
+  font-weight: 500;
+  color: rgba(234, 32, 39,1.0);
+}
+.start-reset-buttons  {
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  margin: 0 10px;
+  padding: 0 8px;
+  color: rgba(234, 32, 39,1.0);
+}
+#timer-box {
+  width: 290px;
+  height: 30vh;
+  margin: auto;
+  margin-top: 50px;
+  padding: 25px 22px 0 22px;
+  text-align: center;
+  border: 1px outset rgba(211, 84, 0,1.0);
+  box-shadow: 0 2px 14px black;
+  border-radius: 40px;
+
+  background-color: rgba(241, 196, 15,0.7);
+}
+.animation {
+   background-color: none;
+  animation-name: tick;
+  animation-timing-function: linear;
+  color: black;
+}
+@keyframes tick {
+  100% {
+    background-color: rgba(231, 76, 60,1.0);
+    width: 25vw;
   }
-  to {
-    transform: rotate(360deg);
+  80% {
+    width: 41vw
+  }
+  60%   {
+    background-color: #fa983a;
+    width: 55vw
+  }
+  40%  {
+    background-color: #f9ca24;
+    width: 69vw
+  }
+  20% {
+    width: 83vw
+  }
+  0% {
+    background-color: rgba(163, 203, 56,1.0);
+    width: 90vw;
+    margin: auto;
+    margin-top: 50px;
   }
 }
